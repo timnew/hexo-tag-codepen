@@ -1,9 +1,9 @@
 {
   "name": "hexo-tag-codepen",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Hexo tag to embed code snippet from codepen.io",
   "main": "index.js",
-  "dev-dependencies": {
+  "devDependencies": {
     "del": "^0.1.2",
     "gulp": "^3.8.7",
     "gulp-bump": "^0.1.11",
