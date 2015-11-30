@@ -1,1 +1,2 @@
-module.exports = require('./lib')
+var codepenTagRender = require('./lib');
+hexo.extend.tag.register('codepen', codepenTagRender);
