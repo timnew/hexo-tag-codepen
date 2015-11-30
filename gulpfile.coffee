@@ -24,7 +24,7 @@ gulp.task 'clean', ->
 
 gulp.task 'coffee', ->
   gulp.src paths.source.coffee
-    .pipe coffee()
+    .pipe coffee({bare: true})
     .pipe gulp.dest paths.dest.lib
 
 gulp.task 'build', ['clean', 'coffee']
