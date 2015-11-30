@@ -1,8 +1,8 @@
-htmlTag = hexo.util.html_tag
-
 # {% codepen userId|anonymous|anon slugHash theme [defaultTab [height [width]]] %}
-codepenTagRender = (args, content) ->
-
+module.exports = (args, content) ->
+  
+  htmlTag = require('hexo-util').htmlTag;
+  
   userId = if args[0] is 'anonymous' then 'anon' else args[0]
   slugHash = args[1]
   theme = args[2]
@@ -23,7 +23,3 @@ codepenTagRender = (args, content) ->
     style: "width: #{width}; overflow: hidden;"
 
   htmlTag 'iframe', params, ''
-
-hexo.extend.tag.register 'codepen', codepenTagRender
-
-module.exports = codepenTagRender
